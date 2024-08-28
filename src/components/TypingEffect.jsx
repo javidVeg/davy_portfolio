@@ -7,7 +7,7 @@ import { TypingEffectContainer } from "../utils/StyledContainers";
 import EnterKeyListener from "../utils/EnterKeyListener";
 import styled from "@emotion/styled";
 
-const TypingEffect = ({ lines, typingSpeed = 100, linePause = 1000 }) => {
+const TypingEffect = ({ lines, typingSpeed = 50, linePause = 500 }) => {
   const [currentText, setCurrentText] = useState("");
   const [previousText, setPreviousText] = useState([]);
   const [lineIndex, setLineIndex] = useState(0);
@@ -22,17 +22,6 @@ const TypingEffect = ({ lines, typingSpeed = 100, linePause = 1000 }) => {
     whiteSpace: "pre",
     fontSize: mediaQuery.isSm ? "5px" : "10px",
   });
-
-  useEffect(() => {
-    const getData = async () => {
-      const response = await fetch(
-        "http://localhost:8080/bot_script"
-      );
-      const data = await response.json();
-      console.log(data);
-    };  
-    getData();
-  }, []);
 
   useEffect(() => {
     if (lineIndex < lines.length) {

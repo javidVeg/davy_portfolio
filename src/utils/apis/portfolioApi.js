@@ -6,7 +6,7 @@ class PortfolioApi {
   }
 
   getBotScript() {
-    return axios.get(`${this.baseUrl}/bot_script`);
+    return axios.get(`${this.baseUrl}/bot_scripts/001/script`);
   }
 }
 

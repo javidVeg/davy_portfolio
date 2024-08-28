@@ -4,7 +4,6 @@ import {
   CRTComputerContainer,
   NoiseOverlayStyle,
 } from "../utils/StyledContainers";
-import axios from "axios";
 import { portfolioApi } from "../utils/apis/portfolioApi";
 
 const IntroPage = () => {
@@ -16,8 +15,7 @@ const IntroPage = () => {
     const getData = async () => {
       const response = await portfolioApi.getBotScript();
       const data = await response.data;
-      console.log(data);
-      setBotScript(data);
+      setBotScript(data[0]);
     };
     getData();
   }, []);
