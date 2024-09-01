@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom"
-import IntroPage from "./IntroPage"
+import Landing from "./Landing"
 
 const Root = () => {
   return (
     <>
       {/* <Outlet /> */}
-      <IntroPage/>
+      <Landing/>
     </>
   );
 };

@@ -6,8 +6,9 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import ErrorPage from "./ErrorPage"
-import IntroPage from "./routes/IntroPage.jsx"
-import Root from "./routes/root.jsx"
+import Root from "./routes/Root.jsx"
+import {CssBaseline, ThemeProvider} from "@mui/material";
+import { theme } from "./utils/theme.js"
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,9 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    <ThemeProvider theme={theme}>
+      {/*<CssBaseline/>*/}
     <RouterProvider router={router} />
+    </ThemeProvider>
   </StrictMode>
 );

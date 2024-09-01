@@ -1,10 +1,14 @@
-body, html {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  box-sizing: border-box;
+html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevent overflow */
+    font-size: "16px";
 }
 
+body {
+    min-height: 100vh; 
+    background-color: #0A0A0A; 
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
