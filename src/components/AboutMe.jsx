@@ -4,6 +4,7 @@ import Selfie from "../assets/davy_selfie.png";
 
 const HeartImage = styled("img")({
   width: "300px",
+  height: "300px",
   paddingBottom: "1rem",
 });
 
@@ -27,9 +28,7 @@ const AboutMe = () => {
           <Typography
             py="2rem"
             color="white"
-            children="Aliquip dolore dolore ut ipsum cillum duis minim consectetur excepteur ad
-      amet. Do eu sit exercitation sint veniam ut fugiat adipisicing qui. Tempor
-      adipisicing sunt ullamco nulla fugiat ex esse quis.Duis exercitation est in ut aliqua commodo aute. Tempor ullamco eu tempor qui cupidatat in qui sit consequat ipsum duis. Officia exercitation sint pariatur anim ex. Cupidatat mollit dolor tempor in id eiusmod elit. Culpa et eu est esse in dolore magna anim amet. Officia eu consequat qui adipisicing veniam et pariatur. Velit esse enim id enim id ex deserunt fugiat."
+            children="As a Frontend Engineer with over 4 years of hands-on experience, I focus on creating impactful web applications. I thrive in taking projects from concept to completion, prioritizing intuitive, user-friendly designs, and effective collaboration with cross-functional teams. I am skilled in React, Javascript, Node and Google GCP, and I’ve had success in boosting user engagement, streamlining processes, and delivering solutions that truly meet client needs. I’m always eager to learn and tackle new challenges, bringing a practical, problem-solving approach to every project I work on."
           />
         }
       />
@@ -42,6 +41,7 @@ const AboutMe = () => {
           flexDirection: "row",
           flexWrap: "wrap",
           justifyContent: "center",
+          alignItems: "center",
         }}
         children={<HeartImage src={Selfie} alt="davy selfie" />}
       />

@@ -16,7 +16,7 @@ const HeaderTextName = styled(Typography)(({ theme }) => ({
     fontFamily: 'Alice, serif',
     fontStyle: 'normal',
     fontSize: '10em',
-    lineHeight: '.8em',
+    lineHeight: '1em',
     color: 'transparent',
     background: 'radial-gradient(circle, #8e6fed 0%, #d72a7d 100%)',
     backgroundSize: '600% 600%',
@@ -35,17 +35,18 @@ const HeaderTextName = styled(Typography)(({ theme }) => ({
       },
     },
     [theme.breakpoints.down('md')]: {
-        fontSize: '5em',
-
+        fontSize: '4.5em',
     }
   }));
   
-const HeaderTextSub = styled(Typography)({
+const HeaderTextSub = styled(Typography)(({ theme }) => ({
   color: "white",
   fontWeight: "400",
-  fontFamily: "Philosopher, sans-serif",
   fontStyle: "normal",
-})
+  [theme.breakpoints.down('md')]: {
+    fontSize: '2.5em',
+}
+}))
 
 const Header = () => {
   return (
@@ -53,7 +54,7 @@ const Header = () => {
       <HeaderTextSub variant="h3">Hiya! Im</HeaderTextSub>
       <HeaderTextName>DAVY ANDREA</HeaderTextName>
       <HeaderTextSub variant="h3">
-        a software engineer with a passion for frontend
+        a software engineer with a passion for frontend.
       </HeaderTextSub>
     </HeaderContainer>
   )

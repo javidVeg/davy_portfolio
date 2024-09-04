@@ -40,12 +40,10 @@ const StyledTimelineContent = styled(TimelineContent)({
   textAlign: "start",
   maxWidth: "80vw",
   minWidth: "50vw",
-  padding: '0px 12px',
+  padding: "0px 12px",
 });
 
-const StyledTimeline = styled(Timeline)(({ theme }) => ({
-
-}))
+const StyledTimeline = styled(Timeline)(({ theme }) => ({}));
 
 const JobTimeline = () => {
   const [expanded, setExpanded] = useState(null);
@@ -58,27 +56,44 @@ const JobTimeline = () => {
 
   const jobs = [
     {
-      title: "Lead Software Engineer - Frontend",
-      company: "Phidata",
+      title: "Software Engineer - Frontend",
+      company: "Decoded Health",
       current: true,
-      details: "Details about the Lead Software Engineer role at Phidata...",
-      timeline: "January 2021 - Present",
+      details:
+        "Spearheaded the development of web-based applications for clinics, integrating key features like Telehealth, appointment management, and infrastructure optimization, while mentoring engineers and driving technical innovation. Maintained strong communication with clients and stakeholders, ensuring alignment with product goals and providing thorough documentation for efficient team operations.",
+      timeline: "August 2022 - Present",
     },
     {
-      title: "Founding Software Engineer",
-      company: "Speedybrand (YC-W23)",
+      title: "Frontend Developer - Intern",
+      company: "Merge",
       current: false,
       details:
-        "Details about the Founding Software Engineer role at Speedybrand...",
-      timeline: "January 2020 - December 2020",
+        "Translated abstract ideas into scalable frontend code, consistently delivering high-quality results. Achieved these outcomes with minimal supervision, ensuring efficiency and effectiveness in development.",
+      timeline: "January 2022 - August 2022",
     },
 
     {
-      title: "Front-End Engineer",
-      company: "Maya Labs (YC-S22)",
+      title: "Web Developer",
+      company: "Freelance",
       current: false,
-      details: "Details about the Front-End Engineer role at Maya Labs...",
-      timeline: "January 2019 - December 2019",
+      details: "Designed, developed, and deployed web applications using HTML, CSS, JavaScript, React, and Node.js, including a non-profit landing page that boosted user engagement by 50% and a React app for a salon that increased online traffic. ",
+      timeline: "January 2020 - December 2021",
+    },
+
+    {
+      title: "Congressional Travel Escort - Staff Sergeant",
+      company: "Office of the Chief Legislative Liaison - U.S. Army",
+      current: false,
+      details: "Organized and facilitated secure international travel for Congressional delegations, managing logistics and ensuring safe escort to meetings with foreign leaders across various countries.",
+      timeline: "January 2020 - September 2023",
+    },
+
+    {
+      title: "Infantryman - Staff Sergeant",
+      company: "Platoon Sergeant - U.S. Army",
+      current: false,
+      details: "Led infantry units in overseas deployments and training exercises, applying military tactics to achieve mission objectives. Delivered training programs and mentored Senior Non-Commissioned Officers in Malawi, Africa, demonstrating strong leadership and instructional skills.",
+      timeline: "January 2012 - January 2020",
     },
   ];
 
@@ -104,7 +119,7 @@ const JobTimeline = () => {
             />
 
             <StyledTimelineContent>
-              <Stack flexDirection= 'row' alignItems='center'>
+              <Stack flexDirection="row" alignItems="center">
                 <Typography
                   variant="h6"
                   component="span"
@@ -136,7 +151,7 @@ const JobTimeline = () => {
                 {expanded === index ? "Show Less" : "Show More"}
               </Button>
               <Collapse in={expanded === index} timeout="auto" unmountOnExit>
-                <Typography variant="body2" color="white">
+                <Typography variant="body2" color={theme.palette.primary[200]} mb='10px'>
                   {job.details}
                 </Typography>
               </Collapse>
