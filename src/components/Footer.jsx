@@ -1,11 +1,13 @@
-import { Grid, Typography, useTheme } from "@mui/material";
 import React from "react";
+import { Grid, Typography, useTheme } from "@mui/material";
+import Emoji from "../assets/emoji.png";
 
 const Footer = () => {
   const theme = useTheme();
   return (
-    <Grid width="100%">
+    <Grid container item width="100%">
       <Grid
+        item
         sx={(theme) => ({
           padding: "10rem",
 
@@ -30,12 +32,15 @@ const Footer = () => {
           children={"Terminator 2: Judgment Day 1991"}
         />
       </Grid>
-      <Typography
-        variant="body1"
-        color="white"
-        align="center"
-        children={`Davy Andrea - ${new Date().getFullYear()}  ©`}
-      />
+      <Grid item sx={{display: 'flex', flexDirection: 'row', alignItems:'flex-end', justifyContent:'center', width: '100%'}}>
+        <img src={Emoji} alt="emoji" style={{ width: "60px" }} />
+        <Typography
+          variant="body1"
+          color="white"
+          align="center"
+          children={`Davy Andrea - ${new Date().getFullYear()}  ©`}
+        />
+      </Grid>
     </Grid>
   );
 };

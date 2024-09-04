@@ -34,9 +34,11 @@ const CircleButton = styled('div')({
     
   });
   
-  const LinkIcon = ({ children, url }) => {
+  const LinkIcon = ({ children, url, isemail }) => {
+    const linkUrl = isemail ? `mailto:${url}` : url;
+  
     return (
-      <a href={url} target="_blank" rel="noopener noreferrer">
+      <a href={linkUrl} target={isemail ? "_self" : "_blank"} rel="noopener noreferrer">
         <CircleButton>
           {children}
         </CircleButton>
@@ -48,10 +50,23 @@ const MobileLinks = () => {
   console.log('MobileLinks')
   return (
     <LinkContainer item container>
-      <LinkIcon url="https://www.google.com" children={<GitHubIcon sx={{color: 'white'}} />} />
-      <LinkIcon url="https://www.google.com" children={<LinkedInIcon sx={{color: 'white'}}/>} />
-      <LinkIcon url="https://www.google.com" children={<EmailIcon sx={{color: 'white'}}/>} />
-      <LinkIcon url="https://www.google.com" children={<NewspaperIcon sx={{color: 'white'}}/>} />
+        <LinkIcon
+        url={import.meta.env.VITE_REACT_APP_GITHUB_URL}
+        children={<GitHubIcon sx={{ color: "white" }} />}
+      />
+      <LinkIcon
+        url={import.meta.env.VITE_REACT_APP_LINKED_IN}
+        children={<LinkedInIcon sx={{ color: "white" }} />}
+      />
+      <LinkIcon
+        url={import.meta.env.VITE_REACT_EMAIL}
+        children={<EmailIcon sx={{ color: "white" }} />}
+        isemail={true}
+      />
+      <LinkIcon
+        url={import.meta.env.VITE_REACT_APP_RESUME_URL}
+        children={<NewspaperIcon sx={{ color: "white" }} />}
+      />
     </LinkContainer>
   )
 }

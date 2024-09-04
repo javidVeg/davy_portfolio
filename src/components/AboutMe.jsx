@@ -28,7 +28,7 @@ const AboutMe = () => {
           <Typography
             py="2rem"
             color="white"
-            children="As a Frontend Engineer with over 4 years of hands-on experience, I focus on creating impactful web applications. I thrive in taking projects from concept to completion, prioritizing intuitive, user-friendly designs, and effective collaboration with cross-functional teams. I am skilled in React, Javascript, Node and Google GCP, and I’ve had success in boosting user engagement, streamlining processes, and delivering solutions that truly meet client needs. I’m always eager to learn and tackle new challenges, bringing a practical, problem-solving approach to every project I work on."
+            children="As a Frontend Engineer with over 4 years of experience, currently working in medtech, I specialize in building impactful web applications. I take projects from concept to completion, focusing on user-friendly designs and collaborating effectively with cross-functional teams. Skilled in React, JavaScript, Node, and Google GCP, I've successfully boosted user engagement and streamlined processes, delivering solutions that meet client needs. I'm always eager to learn and tackle new challenges with a practical, problem-solving mindset."
           />
         }
       />

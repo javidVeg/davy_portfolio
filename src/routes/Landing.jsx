@@ -7,12 +7,12 @@ import AboutMe from "../components/AboutMe";
 import Projects from "../components/Projects";
 import MyCurrentTechnologies from "../components/MyCurrentTechnologies";
 import CurrentlyLearning from "../components/CurrentlyLearning";
-import Footer from "../components/Footer"
-import Links from "../components/Links"
-import { useMediaQueries } from "../utils/hooks/useMediaQueries"
+import Footer from "../components/Footer";
+import Links from "../components/Links";
+import { useMediaQueries } from "../utils/hooks/useMediaQueries";
 
 const LandingContainer = styled(Grid)(({ theme }) => ({
-position: "relative",
+  position: "relative",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
@@ -49,14 +49,14 @@ const StyledDivider = ({ label }) => {
 };
 
 const Landing = () => {
-    const mediaQuery = useMediaQueries()
+  const mediaQuery = useMediaQueries();
   return (
     <LandingContainer container id="landing.container">
       <Grid container item xs={12}>
         <Header />
       </Grid>
-      <Grid container item xs={12} sx={{justifyContent:'center'}}>
-        {mediaQuery.isMd ? <MobileLinks/> : <Links /> }
+      <Grid container item xs={12} sx={{ justifyContent: "center" }}>
+        {mediaQuery.isMd ? <MobileLinks /> : <Links />}
       </Grid>
       <Grid container item xs={12}>
         <StyledDivider label="Me" />
@@ -79,7 +79,6 @@ const Landing = () => {
         <CurrentlyLearning />
       </Grid>
       <Grid container item xs={12}>
-        
         <Footer />
       </Grid>
     </LandingContainer>

@@ -76,10 +76,9 @@ const MyCurrentTechnologies = () => {
     <Grid item xs={12} p="16px">
       <Stack
       gap={2}
-        flexDirection="row"
-        alignContent="center"
+        flexDirection="column"
+        alignItems="flex-start"
         flexWrap="wrap"
-        alignItems="center"
       >
         {techCategories.map((techCategory, index) => (
           <Stack

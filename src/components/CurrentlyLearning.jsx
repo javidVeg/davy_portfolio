@@ -1,19 +1,12 @@
 import React from "react";
 import {
-  Card,
-  CardContent,
   Typography,
-  List,
-  ListItem,
-  ListItemText,
   Grid,
   Stack,
   Box,
 } from "@mui/material";
 import CircularProgress, {
-  circularProgressClasses,
 } from "@mui/material/CircularProgress";
-import { useMediaQueries } from "../utils/hooks/useMediaQueries";
 
 const learning = [
   {
@@ -30,15 +23,12 @@ const learning = [
 ];
 
 const CurrentlyLearning = () => {
-  const mediaQuery = useMediaQueries();
   return (
     <Grid item xs={12} p="16px">
       <Stack
         gap={3}
         flexDirection="column"
-        // justifyContent="space-between"
-        // alignContent="center"
-        // alignItems="center"
+   
       >
         {learning.map((set, index) => (
           <Stack
@@ -59,13 +49,13 @@ const CurrentlyLearning = () => {
               }}
             >
               <Typography
-                variant="h5"
+                variant="body1"
                 color={"primary"}
                 mr="20px"
                 children={set.category}
               />
 
-              <Typography color="white" children={set.subCategory} />
+              <Typography color="white" variant="body2" children={set.subCategory} />
             </Box>
             {set.progress && (
               <Box sx={{ position: "relative" }}>

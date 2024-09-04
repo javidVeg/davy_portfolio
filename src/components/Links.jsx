@@ -5,9 +5,9 @@ import EmailIcon from "@mui/icons-material/Email";
 import NewspaperIcon from "@mui/icons-material/Newspaper";
 import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
-import { Grid } from "@mui/material"
+import { Grid } from "@mui/material";
 
-const LinkContainer = styled(Grid)({
+const LinkContainer = styled(Grid)(({ theme }) => ({
   position: "absolute",
   top: "0",
   right: "0",
@@ -16,25 +16,32 @@ const LinkContainer = styled(Grid)({
   justifyContent: "flex-end",
   alignItems: "center",
   width: "50%",
-    padding: "10px",
-});
+  paddingTop: "20px",
+  paddingRight: "20rem",
+  [theme.breakpoints.down("xl")]: {
+    paddingLeft: "10rem",
+    paddingRight: "10rem",
+  },
+  [theme.breakpoints.down("lg")]: {
+    paddingLeft: "5rem",
+    paddingRight: "5rem",
+  },
+  [theme.breakpoints.down("md")]: {
+    paddingLeft: "1rem",
+    paddingRight: "1rem",
+  },
+}));
 
-const CircleButton = styled("div")({
-  display: "inline-flex",
-  justifyContent: "center",
-  alignItems: "center",
-  width: "50px",
-  height: "50px",
-  borderRadius: "50%",
-  border: "1px solid #887bad",
-  textDecoration: "none",
-  // backgroundColor: '#9c93bf',
-});
+const LinkIcon = ({ children, url, isemail }) => {
+  const linkUrl = isemail ? `mailto:${url}` : url;
 
-const LinkIcon = ({ children, url }) => {
   return (
-    <a href={url} target="_blank" rel="noopener noreferrer">
-      <>{children}</>
+    <a
+      href={linkUrl}
+      target={isemail ? "_self" : "_blank"}
+      rel="noopener noreferrer"
+    >
+      {children}
     </a>
   );
 };
@@ -44,19 +51,20 @@ const Links = () => {
   return (
     <LinkContainer item gap={3}>
       <LinkIcon
-        url="https://www.google.com"
+        url={import.meta.env.VITE_REACT_APP_GITHUB_URL}
         children={<GitHubIcon sx={{ color: "white" }} />}
       />
       <LinkIcon
-        url="https://www.google.com"
+        url={import.meta.env.VITE_REACT_APP_LINKED_IN}
         children={<LinkedInIcon sx={{ color: "white" }} />}
       />
       <LinkIcon
-        url="https://www.google.com"
+        url={import.meta.env.VITE_REACT_EMAIL}
         children={<EmailIcon sx={{ color: "white" }} />}
+        isemail={true}
       />
       <LinkIcon
-        url="https://www.google.com"
+        url={import.meta.env.VITE_REACT_APP_RESUME_URL}
         children={<NewspaperIcon sx={{ color: "white" }} />}
       />
     </LinkContainer>
