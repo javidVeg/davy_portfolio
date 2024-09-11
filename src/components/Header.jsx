@@ -25,19 +25,19 @@ const HeaderTextName = styled(Typography)(({ theme }) => ({
   WebkitBackgroundClip: "text",
   animation: "gradient-animation 10s ease-in-out infinite",
 
-//   "&::after": {
-//     content: "attr(data-text)",
-//     position: "absolute",
-//     top: 0,
-//     left: 0,
-//     color: "transparent",
-//     background: "inherit",
-//     backgroundClip: "text",
-//     WebkitBackgroundClip: "text",
-//     filter: "blur(22px)",
-//     opacity: .9,
-//     zIndex: -1,
-//   },
+  "&::after": {
+    content: "attr(data-text)",
+    position: "absolute",
+    top: 0,
+    left: 0,
+    color: "transparent",
+    background: "inherit",
+    backgroundClip: "text",
+    WebkitBackgroundClip: "text",
+    filter: "blur(22px)",
+    opacity: .9,
+    zIndex: -1,
+  },
 
   "@keyframes gradient-animation": {
     "0%": {
