@@ -32,8 +32,22 @@ const Footer = () => {
           children={"Terminator 2: Judgment Day 1991"}
         />
       </Grid>
-      <Grid item sx={{display: 'flex', flexDirection: 'row', alignItems:'flex-end', justifyContent:'center', width: '100%'}}>
-        <img src={Emoji} alt="emoji" style={{ width: "60px" }} />
+      <Grid
+        item
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "100%",
+          marginBottom: "1em",
+        }}
+      >
+        <img
+          src={Emoji}
+          alt="emoji"
+          style={{ width: "60px", marginRight: "1em" }}
+        />
         <Typography
           variant="body1"
           color="white"
