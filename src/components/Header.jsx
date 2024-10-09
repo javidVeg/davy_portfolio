@@ -34,8 +34,8 @@ const HeaderTextName = styled(Typography)(({ theme }) => ({
     background: "inherit",
     backgroundClip: "text",
     WebkitBackgroundClip: "text",
-    filter: "blur(22px)",
-    opacity: .9,
+    filter: "blur(28px)",
+    opacity: 1,
     zIndex: -1,
   },
 

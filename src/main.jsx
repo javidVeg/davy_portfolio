@@ -9,6 +9,7 @@ import ErrorPage from "./ErrorPage"
 import Root from "./routes/Root.jsx"
 import {CssBaseline, ThemeProvider} from "@mui/material";
 import { theme } from "./utils/theme.js"
+import { firebaseInit } from "./utils/firebaseInit.js"
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,8 @@ const router = createBrowserRouter([
     // ],
   },
 ]);
+
+firebaseInit();
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
