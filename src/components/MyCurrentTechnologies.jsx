@@ -1,11 +1,6 @@
 import React from "react";
 import {
-  Card,
-  CardContent,
   Typography,
-  List,
-  ListItem,
-  ListItemText,
   Grid,
   Stack,
   useTheme,
@@ -32,7 +27,7 @@ const techCategories = [
       "Flutter BLoC",
       "Redux Toolkit",
       "Zustand",
-      "React Hooks ( useState, useContext )",
+      "React Hooks",
     ],
   },
   {

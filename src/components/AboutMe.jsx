@@ -1,6 +1,5 @@
-import { Grid, styled, Typography } from "@mui/material";
 import React from "react";
-import Selfie from "../assets/davy_selfie.png";
+import { Grid, styled, Typography } from "@mui/material";
 
 const HeartImage = styled("img")({
   width: "300px",
@@ -9,6 +8,9 @@ const HeartImage = styled("img")({
 });
 
 const AboutMe = () => {
+
+  const img = 'https://firebasestorage.googleapis.com/v0/b/davy-andrea-portfolio.appspot.com/o/davy_selfie_small.png?alt=media&token=1917c3f1-00f1-4005-a989-790948907d7e'
+
   return (
     <Grid
       item
@@ -43,7 +45,7 @@ const AboutMe = () => {
           justifyContent: "center",
           alignItems: "center",
         }}
-        children={<HeartImage src={Selfie} alt="davy selfie" />}
+        children={<HeartImage src={img} alt="davy selfie" />}
       />
     </Grid>
   );
