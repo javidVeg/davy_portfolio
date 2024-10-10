@@ -56,12 +56,12 @@ const JobTimeline = () => {
 
   const jobs = [
     {
-      title: "Software Engineer - Frontend",
+      title: "Lead Software Engineer - Frontend",
       company: "Decoded Health",
       current: true,
       details:
         "Spearheaded the development of web-based applications for clinics, integrating key features like Telehealth, appointment management, and infrastructure optimization, while mentoring engineers and driving technical innovation. Maintained strong communication with clients and stakeholders, ensuring alignment with product goals and providing thorough documentation for efficient team operations.",
-      timeline: "August 2022 - Present",
+      timeline: "October 2022 - October 2024",
     },
     {
       title: "Frontend Developer - Intern",
@@ -138,7 +138,7 @@ const JobTimeline = () => {
                         p=".2rem"
                         component="span"
                         fontWeight="bold"
-                        children="PRESENT"
+                        children="LAST POSITION"
                       />
                     }
                   />
