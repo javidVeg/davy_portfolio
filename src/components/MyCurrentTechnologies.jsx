@@ -24,10 +24,11 @@ const techCategories = [
   {
     category: "State Management",
     subjects: [
-      "Flutter BLoC",
+      "Redux",
       "Redux Toolkit",
+      "Flutter BLoC",
       "Zustand",
-      "React Hooks",
+      "React Context",
     ],
   },
   {

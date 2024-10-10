@@ -10,6 +10,7 @@ import CurrentlyLearning from "../components/CurrentlyLearning";
 import Footer from "../components/Footer";
 import Links from "../components/Links";
 import { useMediaQueries } from "../utils/hooks/useMediaQueries";
+import ResumeViewer from "../utils/components/ResumeViewer"
 
 const LandingContainer = styled(Grid)(({ theme }) => ({
   position: "relative",
@@ -81,6 +82,7 @@ const Landing = () => {
       <Grid container item xs={12}>
         <Footer />
       </Grid>
+      <ResumeViewer/>
     </LandingContainer>
   );
 };
